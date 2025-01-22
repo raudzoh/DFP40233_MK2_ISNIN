@@ -43,15 +43,15 @@ Partial Class Form1
         Me.chkPisang = New System.Windows.Forms.CheckBox()
         Me.chkKopi = New System.Windows.Forms.CheckBox()
         Me.chkMilo = New System.Windows.Forms.CheckBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.bil = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nama = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.noTel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvMaklumat = New System.Windows.Forms.DataGridView()
         Me.BtnCreate = New System.Windows.Forms.Button()
         Me.BtnRead = New System.Windows.Forms.Button()
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.clmBil = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.clmNama = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.clmNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.dgvMaklumat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblMaklumat
@@ -250,29 +250,14 @@ Partial Class Form1
         Me.chkMilo.Text = "Milo"
         Me.chkMilo.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgvMaklumat
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.bil, Me.nama, Me.noTel})
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 355)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(309, 93)
-        Me.DataGridView1.TabIndex = 24
-        '
-        'bil
-        '
-        Me.bil.HeaderText = "Bil"
-        Me.bil.Name = "bil"
-        '
-        'nama
-        '
-        Me.nama.HeaderText = "nama"
-        Me.nama.Name = "nama"
-        '
-        'noTel
-        '
-        Me.noTel.HeaderText = "noTel"
-        Me.noTel.Name = "noTel"
+        Me.dgvMaklumat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMaklumat.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmBil, Me.clmNama, Me.clmNo})
+        Me.dgvMaklumat.Location = New System.Drawing.Point(26, 355)
+        Me.dgvMaklumat.Name = "dgvMaklumat"
+        Me.dgvMaklumat.Size = New System.Drawing.Size(309, 93)
+        Me.dgvMaklumat.TabIndex = 24
         '
         'BtnCreate
         '
@@ -314,6 +299,21 @@ Partial Class Form1
         Me.BtnDelete.Text = "delete"
         Me.BtnDelete.UseVisualStyleBackColor = False
         '
+        'clmBil
+        '
+        Me.clmBil.HeaderText = "Bil"
+        Me.clmBil.Name = "clmBil"
+        '
+        'clmNama
+        '
+        Me.clmNama.HeaderText = "Nama"
+        Me.clmNama.Name = "clmNama"
+        '
+        'clmNo
+        '
+        Me.clmNo.HeaderText = "noTel"
+        Me.clmNo.Name = "clmNo"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -323,7 +323,7 @@ Partial Class Form1
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.BtnRead)
         Me.Controls.Add(Me.BtnCreate)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvMaklumat)
         Me.Controls.Add(Me.chkMilo)
         Me.Controls.Add(Me.chkKopi)
         Me.Controls.Add(Me.chkPisang)
@@ -347,7 +347,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lblMaklumat)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMaklumat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -374,12 +374,12 @@ Partial Class Form1
     Friend WithEvents chkPisang As CheckBox
     Friend WithEvents chkKopi As CheckBox
     Friend WithEvents chkMilo As CheckBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents bil As DataGridViewTextBoxColumn
-    Friend WithEvents nama As DataGridViewTextBoxColumn
-    Friend WithEvents noTel As DataGridViewTextBoxColumn
+    Friend WithEvents dgvMaklumat As DataGridView
     Friend WithEvents BtnCreate As Button
     Friend WithEvents BtnRead As Button
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnDelete As Button
+    Friend WithEvents clmBil As DataGridViewTextBoxColumn
+    Friend WithEvents clmNama As DataGridViewTextBoxColumn
+    Friend WithEvents clmNo As DataGridViewTextBoxColumn
 End Class
